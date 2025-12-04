@@ -160,28 +160,28 @@ Pressione ESC para fechar a tela da tradução
 
 
 
-📸 Screenshots
+## 📸 Screenshots
 
 Coloque algumas imagens na pasta screenshots/ e referencie aqui:
 
-![Icone ativo](screenshots/screenshot icon.png)
-![Resultado da tradução](screenshots/screenshot translation2.png)
+! [Icone ativo](screenshots/screenshot icon.png)
+! [Resultado da tradução](screenshots/screenshot translation2.png)
 
-🛣 Roadmap / Próximos passos
+## 🛣 Roadmap / Próximos passos
  
- Tela de configurações (idiomas, API Key, hotkeys)
+ - Tela de configurações (idiomas, API Key, hotkeys)
  
- Suporte a múltiplos idiomas de origem/destino
+ - Suporte a múltiplos idiomas de origem/destino
 
- Histórico de traduções
+ - Histórico de traduções
 
- Build para Linux (X11/Wayland) e macOS
+ - Build para Linux (X11/Wayland) e macOS
 
- Melhorias de UI/UX na janela flutuante
+ - Melhorias de UI/UX na janela flutuante
 
- Opção de copiar texto original/traduzido com um clique
+ - Opção de copiar texto original/traduzido com um clique
 
-🤝 Contribuindo
+## 🤝 Contribuindo
 
 Sugestões, issues e PRs são bem-vindos!
 
@@ -195,7 +195,7 @@ Push para a branch: git push origin feature/minha-feature
 
 Abra um Pull Request
 
-📄 Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT.
 Veja o arquivo LICENSE
