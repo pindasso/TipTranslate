@@ -157,3 +157,50 @@ target=pt
 O aplicativo deve aparecer na bandeja do sistema.
 Pressione Ctrl + Shift + T para iniciar uma captura da tela, rodar o OCR e exibir a tradução.
 Pressione ESC para fechar a tela da tradução
+
+
+
+📸 Screenshots
+
+Coloque algumas imagens na pasta screenshots/ e referencie aqui:
+
+![Icone ativo](screenshots/screenshot icon.png)
+![Resultado da tradução](screenshots/screenshot translation2.png)
+
+🛣 Roadmap / Próximos passos
+ 
+ Tela de configurações (idiomas, API Key, hotkeys)
+ 
+ Suporte a múltiplos idiomas de origem/destino
+
+ Histórico de traduções
+
+ Build para Linux (X11/Wayland) e macOS
+
+ Melhorias de UI/UX na janela flutuante
+
+ Opção de copiar texto original/traduzido com um clique
+
+🤝 Contribuindo
+
+Sugestões, issues e PRs são bem-vindos!
+
+Faça um fork do projeto
+
+Crie uma branch: git checkout -b feature/minha-feature
+
+Commit suas mudanças: git commit -m 'Adiciona minha feature'
+
+Push para a branch: git push origin feature/minha-feature
+
+Abra um Pull Request
+
+📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
+Veja o arquivo LICENSE
+ para mais detalhes.
+
+👨‍💻 Autor
+
+Kelvin Bravin
