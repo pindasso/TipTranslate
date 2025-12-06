@@ -118,16 +118,6 @@ int main(int argc, char *argv[]) {
 
     QObject::connect(hotkey, &HotkeyListener::hotkeyPressed, &app, startCapture);
 
-    QObject::connect(hotkey, &HotkeyListener::closeHotkeyPressed,
-         &app,
-         [&](){
-             if (currentPane) {
-                 currentPane->close();
-                 currentPane = nullptr;
-             }
-         }
-    );
-
 #endif
 
     return app.exec();
