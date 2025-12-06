@@ -9,7 +9,12 @@ public:
     void setOverlayText(const QString& text);
 protected:
     void paintEvent(QPaintEvent*) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
 private:
     QPixmap img_;
     QString text_;
+
+    QPoint dragStartPosGlobal_;
+    QPoint windowStartPos_;
 };

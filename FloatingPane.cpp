@@ -49,3 +49,31 @@ void FloatingPane::paintEvent(QPaintEvent*) {
     opt.setAlignment(Qt::AlignLeft | Qt::AlignTop);
     p.drawText(textRect, text_, opt);
 }
+
+void FloatingPane::mousePressEvent(QMouseEvent* event) {
+    if (event->button() == Qt::LeftButton) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        dragStartPosGlobal_ = event->globalPosition().toPoint();
+#else
+        dragStartPosGlobal_ = event->globalPos();
+#endif
+        windowStartPos_ = frameGeometry().topLeft();
+    }
+    QWidget::mousePressEvent(event);
+}
+
+void FloatingPane::mouseMoveEvent(QMouseEvent* event) {
+    if (event->buttons() & Qt::LeftButton) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        QPoint currentGlobal = event->globalPosition().toPoint();
+#else
+        QPoint currentGlobal = event->globalPos();
+#endif
+        QPoint delta = currentGlobal - dragStartPosGlobal_;
+        move(windowStartPos_ + delta);
+    }
+    QWidget::mouseMoveEvent(event);
+}
+
+
+

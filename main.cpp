@@ -6,6 +6,8 @@
 #include <QAction>
 #include <QIcon>
 #include <QSettings>
+#include <QLockFile>
+#include <QDir>
 
 #include "OverlaySelect.h"
 #include "FloatingPane.h"
@@ -18,6 +20,14 @@ FloatingPane* currentPane = nullptr;
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
+
+    QString lockFilePath = QDir::temp().absoluteFilePath("TipTranslate.lock");
+    QLockFile lock(lockFilePath);
+
+    if (!lock.tryLock()) {
+        return 0;
+    }
+
 
     // ====== System Tray ======
     auto *tray = new QSystemTrayIcon(&app);
