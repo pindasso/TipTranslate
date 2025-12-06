@@ -26,7 +26,7 @@ Focado em produtividade para quem lê conteúdo em outros idiomas (documentaçõ
 
 Este projeto foi criado com dois objetivos principais:
 
-1. **Resolver um problema real**: ler conteúdo em inglês/idiomas estrangeiros de forma rápida, especialmente de locais onde não é possível copiar o texto.
+1. **Resolver um problema real**: ler conteúdo em idiomas estrangeiros de forma rápida, especialmente de locais onde não é possível copiar o texto.
 2. **Servir como projeto de portfólio** em C++/Qt, mostrando:
    - uso de Qt Widgets
    - integração com APIs HTTP
