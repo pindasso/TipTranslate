@@ -23,15 +23,18 @@ void Translator::setAuthKey(const QString& key) {
     authKey_ = key;
 }
 
+void Translator::setEndpoint(const QString& endpoint) {
+    endpoint_ = endpoint;
+}
+
 void Translator::translate(const QString& text) {
-    if (authKey_.isEmpty()) {
-        emit errorOccurred("DeepL API key não definida (use setAuthKey).");
-        emit translated(text); // fallback: devolve texto original
+    if (authKey_.isEmpty() || endpoint_.isEmpty()) {
+        emit errorOccurred("DeepL API key ou endpoint não definido.");
+        emit translated(text);
         return;
     }
 
-    // Endpoint Free
-    QUrl url("https://api-free.deepl.com/v2/translate");
+    QUrl url(endpoint_);
     QNetworkRequest request(url);
 
     // Header de auth: Authorization: DeepL-Auth-Key <key>

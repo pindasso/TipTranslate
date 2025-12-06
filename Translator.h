@@ -10,6 +10,7 @@ public:
     explicit Translator(QObject* parent = nullptr);
     void setTargets(const QString& src, const QString& tgt);
     void setAuthKey(const QString& key);
+    void setEndpoint(const QString& key);
 
 signals:
     void translated(const QString& text);
@@ -25,6 +26,7 @@ private:
     QString src_ = "auto";
     QString tgt_ = "pt";
     QString authKey_;
+    QString endpoint_;
 
     QNetworkAccessManager* networkManager_;
 };

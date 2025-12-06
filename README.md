@@ -146,6 +146,7 @@ Exemplo de conteúdo mínimo do config.ini:
 lang=eng+por
 
 [deepl]
+api_endpoint=https://api-free.deepl.com/v2/translate
 api_key=API-KEY-AQUI
 source=auto
 target=pt

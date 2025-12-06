@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
     const QString ocrLang = settings.value("ocr/lang", "eng").toString();
 
     const QString apiKey  = settings.value("deepl/api_key").toString();
+    const QString apiEndpoint = settings.value("deepl/api_endpoint").toString();
     const QString srcLang = settings.value("deepl/source", "auto").toString();
     const QString tgtLang = settings.value("deepl/target", "pt").toString();
 
@@ -80,11 +81,13 @@ int main(int argc, char *argv[]) {
 
                              QObject::connect(worker, &OcrWorker::ocrDone, pane, [=](const QString& txt){
                                  // traduz
+                                 pane->setRawText(txt);
                                  auto *tr = new Translator(pane);
                                  QObject::connect(tr, &Translator::translated, pane, [=](const QString& t){
                                      pane->setOverlayText(t);
                                  });
                                  tr->setAuthKey(apiKey);
+                                 tr->setEndpoint(apiEndpoint);
                                  tr->setTargets(srcLang, tgtLang);
                                  tr->translate(txt);
                                  thr->quit();
