@@ -26,13 +26,12 @@ Focado em produtividade para quem lê conteúdo em outros idiomas (documentaçõ
 
 Este projeto foi criado com dois objetivos principais:
 
-1. **Resolver um problema real**: ler conteúdo em inglês/idiomas estrangeiros de forma rápida, sem precisar copiar/colar manualmente em tradutores online.
+1. **Resolver um problema real**: ler conteúdo em inglês/idiomas estrangeiros de forma rápida, especialmente de locais onde não é possível copiar o texto.
 2. **Servir como projeto de portfólio** em C++/Qt, mostrando:
    - uso de Qt Widgets
    - integração com APIs HTTP
    - uso de OCR (Tesseract)
    - hotkeys globais no Windows
-   - empacotamento com `windeployqt`
 
 ---
 
@@ -56,7 +55,7 @@ Este projeto foi criado com dois objetivos principais:
   Pequena janela flutuante exibindo:
   - texto OCR
   - texto traduzido
-  (e futuramente botões de copiar, re-traduzir, etc.)
+  - botões de copiar os textos traduzidos ou originais
 
 - `Translator`  
   Classe responsável pela chamada HTTP à API de tradução (ex.: DeepL).  
