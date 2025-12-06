@@ -157,8 +157,8 @@ target=pt
 ### 6. Ao executar
 O aplicativo deve aparecer na bandeja do sistema.
 Pressione Ctrl + Shift + T para iniciar uma captura da tela, rodar o OCR e exibir a tradução.
-Pressione ESC para fechar a tela da tradução
-
+Botão "Raw" Copia o conteúdo lido pelo OCR
+Botão "TR" Copia o conteúdo traduzido
 
 
 ## 📸 Screenshots
